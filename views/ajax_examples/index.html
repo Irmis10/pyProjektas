@@ -1,0 +1,41 @@
+{{extend 'layout.html'}}
+
+<p>Type something and press the button.
+   The last 10 entries will appear sorted in a table below.</p>
+
+<form>
+<INPUT type="text" id="q" name = "q" value="web2py"/>
+<INPUT type="button" value="submit"
+       onclick="ajax('{{=URL('data')}}',['q'],'target');"/>
+</form>
+<br/>
+<div id="target"></div>
+
+
+<form>
+<INPUT type="text"  name = "kiek" value="ivesk skaiciu"/>
+<INPUT type="button" class="btn btn-secondary" value="1"
+       onclick="ajax('{{=URL('speliones?kiek=1')}}',[],'target');"/>
+<INPUT type="button" class="btn btn-danger" value="2"
+       onclick="ajax('{{=URL('speliones?kiek=2')}}',[],'target');"/>
+<INPUT type="button" class="btn btn-success" value="3"
+       onclick="ajax('{{=URL('speliones?kiek=3')}}',[],'target');"/>
+<INPUT type="button" class="btn btn-secondary" value="4"
+       onclick="ajax('{{=URL('speliones?kiek=4')}}',[],'target');"/>
+<INPUT type="button" class="btn btn-info" value="5"
+       onclick="ajax('{{=URL('speliones?kiek=5')}}',[],'target');"/>
+<INPUT type="button" class="btn btn-warning" value="6"
+       onclick="ajax('{{=URL('speliones?kiek=6')}}',[],'target');"/>
+<INPUT type="button" value="7"
+       onclick="ajax('{{=URL('speliones?kiek=7')}}',[],'target');"/>
+<INPUT type="button"  class="btn btn-danger" value="8"
+       onclick="ajax('{{=URL('speliones?kiek=8')}}',[],'target');"/>
+<INPUT type="button" class="btn btn-info" value="9"
+       onclick="ajax('{{=URL('speliones?kiek=9')}}',[],'target');"/>
+<INPUT type="button" class="btn btn-success" value="10"
+       onclick="ajax('{{=URL('speliones?kiek=10')}}',[],'target');"/>
+<INPUT type="button" class="btn btn-warning" value="Spek"
+       onclick="ajax('{{=URL('speliones')}}',['kiek'],'target');"/>
+</form>
+<br/>
+<div id="target"></div>

@@ -1,0 +1,6 @@
+databases/**
+sessions/**
+cache/**
+private/**
+uploads/**
+errors/**
